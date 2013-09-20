@@ -50,7 +50,8 @@ exports.template = function(grunt, init, done) {
     props.keywords = [];
     props.dependencies = {
       'noflo': '~0.4.0',
-      'coffee-script': '~1.6.3'
+      'coffee-script': '~1.6.3',
+      'noflo-core': '~0.1.2'
     };
     props.noflo = {
       graphs: {
