@@ -4,7 +4,7 @@ databaseUrl = process.env.DATABASE_URL
 port = process.env.PORT
 
 initializer = """
-  '#{port}' -> PORT Main({%= component_name %}/Main)
+  '#{port}' -> PORT Main({%= name %}/Main)
   '#{databaseUrl}' -> DATABASE Main()
 """
 
