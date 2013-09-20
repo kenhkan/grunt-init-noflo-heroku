@@ -54,10 +54,9 @@ exports.template = function(grunt, init, done) {
       'noflo-core': '~0.1.2'
     };
     props.noflo = {
-      graphs: {
-        "Main": "./graphs/Main.fbp"
-      }
+      graphs: {}
     };
+    props.noflo.graphs.Main = "./graphs/Main.fbp";
     props.devDependencies = {
       'grunt': '~0.4.1',
       'grunt-contrib-coffee': '~0.6.6',
