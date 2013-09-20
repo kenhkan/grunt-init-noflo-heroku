@@ -1,10 +1,10 @@
 /*
- * grunt-init-noflo
+ * grunt-init-noflo-heroku
  * https://noflojs.org/
  *
- * Copyright (c) 2013 Henri Bergius
+ * Copyright (c) 2013 Kenneth Kan
  *
- * Derived from grunt-init-node copyright (c) 2012 "Cowboy" Ben Alman, contributors
+ * Derived from grunt-init-noflo copyright (c) 2013 Henri Bergius
  *
  * Licensed under the MIT license.
  */
@@ -35,11 +35,6 @@ exports.template = function(grunt, init, done) {
     // Prompt for these values.
     init.prompt('name'),
     init.prompt('description'),
-    {
-      name: 'component_name',
-      message: 'Give a name for your first NoFlo component. Component names are usually CamelCased verbs',
-      'default': 'DoSomething'
-    },
     init.prompt('version'),
     init.prompt('licenses'),
     init.prompt('author_name'),
@@ -54,13 +49,14 @@ exports.template = function(grunt, init, done) {
   ], function(err, props) {
     props.keywords = [];
     props.dependencies = {
-      'noflo': '~0.4.0'
+      'noflo': '~0.4.0',
+      'coffee-script': '~1.6.3'
     };
     props.noflo = {
-      components: {},
-      graphs: {}
+      graphs: {
+        "Main": "./graphs/Main.fbp"
+      }
     };
-    props.noflo.components[props.component_name] = 'components/' + props.component_name + '.coffee';
     props.devDependencies = {
       'grunt': '~0.4.1',
       'grunt-contrib-coffee': '~0.6.6',

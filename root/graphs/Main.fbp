@@ -1,0 +1,5 @@
+EXPORT=PORT.IN:PORT
+EXPORT=DATABASE.IN:DATABASE
+
+Port(core/Repeat) OUT -> IN DisplayPort(core/Output)
+Database(core/Repeat) OUT -> IN DisplayDatabase(core/Output)
